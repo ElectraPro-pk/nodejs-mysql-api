@@ -47,7 +47,7 @@ app.get('/search-item/:query',(req,res) => {
     })
 })
 app.get('/delete-item/:id',(req,res) => {
-    sql = "DELETE FROM ITEMS where serialNo = "+req.params.id
+    sql = "DELETE FROM items where serialNo = "+req.params.id
     dbConn.query(sql,function(err,response){
         if(err){
               res.json({"status":503});
