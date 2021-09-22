@@ -24,7 +24,7 @@ app.get('/items',(req,res) => {
         if(err){
             res.sendStatus(505).send(err).end();
         }
-        res.json(response)
+        res.json({"data":response})
     })
 })
 app.get('/new-item/:id,:product,:category,:price',(req,res) => {
@@ -43,7 +43,7 @@ app.get('/search-item/:query',(req,res) => {
         if(err){
             res.sendStatus(505).send(err).end();
         }
-        res.json(response)
+        res.json({"data":response})
     })
 })
 app.get('/delete-item/:id',(req,res) => {
